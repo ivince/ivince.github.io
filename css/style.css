@@ -278,7 +278,53 @@ pre .javascript .function {
 /* 
  * ivince 2016-02-26
  */
+.lazy {
+    display: none;
+}
+.ins_box {
+    width: 33.3333333%;
+    float: left;
+}
 .ins_img {
+    cursor: pointer;
     width: 100%;
-    height: auto;
+}
+.ins_modal {
+    position: fixed;
+    background: rgba(0,0,0,0.75);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 5px;
+    z-index: 1;
+}
+.modal-box {
+    margin: auto;
+    max-width: 540px;
+    background: white;
+    border-radius: 5px;
+}
+.modal_img {
+    max-width: 540px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.ins_header {
+    font-size: 14px;
+    padding: 0 10px;
+    width: 100%;
+    background: rgb(43, 92, 132);
+    position: fixed;
+    top: 0;
+}
+.ins_footer {
+    font-size: 12px;
+    padding: 0 10px;
+    width: 100%;
+    background: rgb(43, 92, 132);
+    position: fixed;
+    bottom: 0;
 }

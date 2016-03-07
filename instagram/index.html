@@ -18,24 +18,51 @@
              s.parentNode.insertBefore(hm, s);
          })();
     </script>    
-
-    <script src="../js/angular.min.js"></script>
-    <script src="../js/instagram.js"></script>
 </head>
 
 <body>
 
-<div ng-app="MyApp" ng-controller="InstagramController">
-    <div class="modal">
+<div class="ins_header">
+    ivince.wlp
+</div>
+<div class="container">
+    <div class="ins_container">
     </div>
-    <div class="container">
-        <ul>
-            <li ng-repeat="item in items">
-            <img class="ins_img" ng-src="{{path+item.url.thumnail}}" />
-            </li>
-        </ul>
-    </div>
+</div>
+
+<div class="ins_footer">
+    反求诸己
 </div>
 
 </body>
 </html>
+<style>
+.container {
+    max-width: 740px;
+    margin: auto;
+}
+.ins_container {
+    width: 100%;
+}
+body {
+    border: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.modal-box > img {
+    box-shadow: 0;
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 0;
+    -webkit-box-shadow: none;
+    border-top: 1px solid #CDCDCD;
+    border-bottom: 1px solid #CDCDCD;
+    /* overflow: scroll; */
+}
+</style>
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery.lazyload.js"></script>
+<script src="../js/instagram.js"></script>
