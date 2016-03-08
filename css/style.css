@@ -291,7 +291,7 @@ pre .javascript .function {
 }
 .ins_modal {
     position: fixed;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.5);
     left: 0;
     right: 0;
     top: 0;
@@ -314,17 +314,46 @@ pre .javascript .function {
 }
 .ins_header {
     font-size: 14px;
-    padding: 0 10px;
-    width: 100%;
-    background: rgb(43, 92, 132);
-    position: fixed;
+    line-height: 14px;
+    padding: 15px 10px;
+    margin-bottom: 40px;
+    background: rgb(64, 144, 219);
+    color: rgba(256,256,256,1);
+    font-weight: bold;
     top: 0;
 }
 .ins_footer {
+    border-top: solid 1px #CDCDCD;
+    margin-top: 40px;
+    font-size: 18px;
+    padding: 40px 10px;
+    background: white;
+    text-align: center;
+    color: #CDCDCD;
+}
+.img_location {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 20px;
+    text-align: right;
+}
+.img_title {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 20px
+}
+.yinhao {
+    font-size: 18px;
+    color: rgba(0,0,0,0.75);
+}
+.yinhao2 {
+    font-size: 28px;
+    color: rgba(0,0,0,0.5);
+}
+.at-location {
     font-size: 12px;
-    padding: 0 10px;
-    width: 100%;
-    background: rgb(43, 92, 132);
-    position: fixed;
-    bottom: 0;
+    color: rgba(0,0,0,0.25);
+}
+.heart {
+    color: red;
 }

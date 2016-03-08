@@ -16,9 +16,18 @@ var InsModal = function(ins_num) {
     var modal_template = [
         '<div class="ins_modal" onClick="InsModal_()">',
         '    <div class="modal-box">',
-        '        <div>location_</div>',
+        '        <div class="img_location">',
+        '            <i class="fa fa-camera"></i>',
+        '            <i class="fa fa-at at-location"></i>',
+        '            location_',
+        '        </div>',
         '        <img class="modal_img" src="url_">',
-        '        <div>text</div>',
+        '        <div class="img_title">',
+        '            <i class="fa fa-heart heart"></i>',
+        '            <i class="yinhao">“</i>',
+        '                title_',
+        '            <i class="yinhao">”</i>',
+        '        </div>',
         '    </div>',
         '</div>'
         ].join("");
@@ -68,7 +77,7 @@ $(window).resize(function() {
 var render = function() {
     var ins_template = [
         '<div class="ins_box">',
-        '<div style="padding: 5px">',
+        '<div style="padding: 2px">',
         '    <img onClick="InsModal(ins_num)" class="ins_img" title="title_" src="url_"/>',
         '</div>',
         '</div>'
