@@ -290,33 +290,33 @@ pre .javascript .function {
     width: 100%;
 }
 .ins_modal {
+    display: flex;
     position: fixed;
     background: rgba(0,0,0,0.5);
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    padding: 5px;
+    padding: 5px 10px;
     z-index: 1;
 }
 .modal-box {
     margin: auto;
-    max-width: 540px;
+    max-width: 740px;
     background: white;
     border-radius: 5px;
 }
 .modal_img {
     max-width: 540px;
     border: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
-    width: 100%;
 }
 .ins_header {
     font-size: 14px;
     line-height: 14px;
     padding: 15px 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     background: rgb(64, 144, 219);
     color: rgba(256,256,256,1);
     font-weight: bold;
@@ -324,9 +324,10 @@ pre .javascript .function {
 }
 .ins_footer {
     border-top: solid 1px #CDCDCD;
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 18px;
-    padding: 40px 10px;
+    line-height: 18px;
+    padding: 20px 10px;
     background: white;
     text-align: center;
     color: #CDCDCD;
@@ -334,21 +335,25 @@ pre .javascript .function {
 .img_location {
     font-size: 14px;
     line-height: 14px;
-    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: right;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .img_title {
     font-size: 14px;
     line-height: 14px;
-    padding: 10px 20px
-}
-.yinhao {
-    font-size: 18px;
-    color: rgba(0,0,0,0.75);
-}
-.yinhao2 {
-    font-size: 28px;
-    color: rgba(0,0,0,0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .at-location {
     font-size: 12px;
@@ -356,4 +361,16 @@ pre .javascript .function {
 }
 .heart {
     color: red;
+}
+.line-1px {
+    position: relative;
+}
+.line-1px:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid #CDCDCD;
+    -webkit-transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
 }
