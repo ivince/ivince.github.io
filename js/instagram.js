@@ -9,6 +9,17 @@ view_h = $(document.body).height();
 view_w = $(document.body).width();
 view_w = view_w > 740 ? 740 : view_w;
 
+function shuffle(sourceArray) {
+    for (var i = 0; i < sourceArray.length - 1; i++) {
+        var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+
+        var temp = sourceArray[j];
+        sourceArray[j] = sourceArray[i];
+        sourceArray[i] = temp;
+    }
+    return sourceArray;
+}
+
 var InsModal_ = function() {
     $('.ins_modal').remove();
     $('body').css('overflow', 'auto');
@@ -76,6 +87,8 @@ var render = function() {
         '</div>',
         '</div>'
         ].join("");
+
+    items = shuffle(items);
 
     $.each(items, function(index, item) {
         var template = ins_template;
