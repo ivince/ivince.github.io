@@ -1,4 +1,5 @@
 var url = "../js/ins.json";
+var style = '/ivince';
 var items = new Array();
 var img_h = 0;
 var img_w = 0;
@@ -38,8 +39,8 @@ var InsModal = function(ins_num) {
         '</div>'
         ].join("");
 
-    var url_path = 'http://7xraib.com1.z0.glb.clouddn.com/';
-    modal_template = modal_template.replace('url_', url_path + items[ins_num].images.standard.url);
+    var url_path = '//7xraib.com1.z0.glb.clouddn.com/';
+    modal_template = modal_template.replace('url_', url_path + items[ins_num].images.standard.url + style);
     modal_template = modal_template.replace('location_', items[ins_num].location.name);
     modal_template = modal_template.replace('title_', items[ins_num].title);
 
@@ -78,9 +79,9 @@ var render = function() {
 
     $.each(items, function(index, item) {
         var template = ins_template;
-        var url_path = 'http://7xraib.com1.z0.glb.clouddn.com/';
+        var url_path = '//7xraib.com1.z0.glb.clouddn.com/';
 
-        template = template.replace('url_', url_path + item.images.thumnail.url);
+        template = template.replace('url_', url_path + item.images.thumnail.url + style);
         template = template.replace('ins_num', index);
         template = template.replace('title_', item.title);
 
