@@ -17,20 +17,24 @@ var InsModal = function(ins_num) {
     $('body').css('overflow', 'hidden');
     var modal_template = [
         '<div class="ins_modal" onClick="InsModal_()">',
+        '<div class="ins-tab">',
+        '<div class="modal-tab">',
         '    <div class="modal-box">',
         '        <div class="img_location">',
-        '            <i class="fa fa-camera"></i>',
-        '            <i class="fa fa-at at-location"></i>',
+        '            <i class="shot-12px"></i>',
+        '            <i class="at-10px"></i>',
         '            location_',
         '        </div>',
         '        <div class="line-1px"></div>',
         '        <img class="modal_img" src="url_">',
         '        <div class="line-1px"></div>',
         '        <div class="img_title">',
-        '            <i class="fa fa-heart heart"></i>',
+        '            <div class="like-12px"></div>',
         '            title_',
         '        </div>',
         '    </div>',
+        '</div>',
+        '</div>',
         '</div>'
         ].join("");
 
