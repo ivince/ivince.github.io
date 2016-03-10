@@ -36,3 +36,10 @@ li.title:hover {
 body > .row {
     margin: 0;
 }
+.ins-icon {
+    width: 26px;
+    height: 20px;
+    background: url(../img/camera.png);
+    background-size: 26px 20px;
+}
+

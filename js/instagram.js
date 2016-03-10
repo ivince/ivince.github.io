@@ -66,7 +66,7 @@ $(window).resize(function() {
 var render = function() {
     var ins_template = [
         '<div class="ins_box">',
-        '<div style="padding: 2px; padding-left: lpadding_; padding-right: rpadding_">',
+        '<div style="padding: 0px; padding-left: lpadding_; padding-right: rpadding_">',
         '    <img onClick="InsModal(ins_num)" class="ins_img" title="title_" src="url_"/>',
         '</div>',
         '</div>'
@@ -89,13 +89,13 @@ var render = function() {
 
         if (index % 3 == 0) {
             template = template.replace('lpadding_', '0px');
-            template = template.replace('rpadding_', '2px');
+            template = template.replace('rpadding_', '0px');
         } else if ((index + 1) % 3 == 0) {
             template = template.replace('rpadding_', '0px');
-            template = template.replace('lpadding_', '2px');
+            template = template.replace('lpadding_', '0px');
         } else{
-            template = template.replace('rpadding_', '2px');
-            template = template.replace('lpadding_', '2px');
+            template = template.replace('rpadding_', '0px');
+            template = template.replace('lpadding_', '0px');
         }
 
         $(template).appendTo('.ins_container');
