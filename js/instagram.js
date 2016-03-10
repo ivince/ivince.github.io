@@ -82,7 +82,7 @@ $(window).resize(function() {
 var render = function() {
     var ins_template = [
         '<div class="ins_box">',
-        '<div style="padding: 2px;">',
+        '<div style="padding: 1px;">',
         '    <img onClick="InsModal(ins_num)" class="ins_img" title="title_" src="url_"/>',
         '</div>',
         '</div>'
