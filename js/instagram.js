@@ -38,12 +38,12 @@ var InsModal = function(ins_num) {
         '</div>'
         ].join("");
 
-    var url_path = '../ins/';
+    var url_path = 'http://7xraib.com1.z0.glb.clouddn.com/';
     modal_template = modal_template.replace('url_', url_path + items[ins_num].images.standard.url);
     modal_template = modal_template.replace('location_', items[ins_num].location.name);
     modal_template = modal_template.replace('title_', items[ins_num].title);
 
-    img_h = items[ins_num].images.standard.height + 70;// 70px is the (location + title + line-1px)
+    img_h = items[ins_num].images.standard.height + 68;// 68px is the (location + title + line-1px)
     img_w = items[ins_num].images.standard.width;
 
     $(modal_template).appendTo('.container');
@@ -51,8 +51,8 @@ var InsModal = function(ins_num) {
     var img_  = img_h / img_w;
     var view_ = view_h / view_w;
 
-    var cssImgH = view_h - 80; // 80px is the (ins_modal's padding + location + title + line-1px)
-    var cssBoxH = Math.floor(img_w / (img_h - 70) * cssImgH);
+    var cssImgH = view_h - 78; // 80px is the (ins_modal's padding + location + title + line-1px)
+    var cssBoxH = Math.floor(img_w / (img_h - 68) * cssImgH);
 
     if (img_ > view_) {
         $('.modal_img').css('height', String(cssImgH) + 'px');
@@ -70,22 +70,15 @@ $(window).resize(function() {
 var render = function() {
     var ins_template = [
         '<div class="ins_box">',
-        '<div style="padding: 0px; padding-left: lpadding_; padding-right: rpadding_">',
+        '<div style="padding: 2px;">',
         '    <img onClick="InsModal(ins_num)" class="ins_img" title="title_" src="url_"/>',
         '</div>',
         '</div>'
         ].join("");
 
-    var _items = items.slice();
-    for (var i=0; i<10; i++) {
-        $.each(_items, function(index, item) {
-            items.push(item);
-        })
-    }
-
     $.each(items, function(index, item) {
         var template = ins_template;
-        var url_path = '../ins/';
+        var url_path = 'http://7xraib.com1.z0.glb.clouddn.com/';
 
         template = template.replace('url_', url_path + item.images.thumnail.url);
         template = template.replace('ins_num', index);
