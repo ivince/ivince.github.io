@@ -312,12 +312,11 @@ pre .javascript .function {
 }
 .modal-box {
     margin: auto;
-    max-width: 740px;
+    max-width: 720px;
     background: white;
     border-radius: 5px;
 }
 .modal_img {
-    max-width: 740px;
     border: none;
     margin: auto;
     padding: 0;
