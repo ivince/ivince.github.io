@@ -291,13 +291,23 @@ pre .javascript .function {
 }
 .ins_modal {
     position: fixed;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.25);
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     padding: 5px 10px;
     z-index: 1;
+}
+.modal-active {
+    overflow: hidden;
+}
+.modal-active .row {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
 }
 .modal-tab {
     display: table-cell;

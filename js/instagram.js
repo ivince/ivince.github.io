@@ -22,11 +22,11 @@ function shuffle(sourceArray) {
 
 var InsModal_ = function() {
     $('.ins_modal').remove();
-    $('body').css('overflow', 'auto');
+    $('body').removeClass('modal-active');
 }
 
 var InsModal = function(ins_num) {
-    $('body').css('overflow', 'hidden');
+    $('body').addClass('modal-active');
     var modal_template = [
         '<div class="ins_modal" onClick="InsModal_()">',
         '<div class="ins-tab">',
@@ -58,7 +58,7 @@ var InsModal = function(ins_num) {
     img_h = items[ins_num].images.standard.height + 68;// 68px is the (location + title + line-1px)
     img_w = items[ins_num].images.standard.width;
 
-    $(modal_template).appendTo('.container');
+    $(modal_template).appendTo('body');
 
     var img_  = img_h / img_w;
     var view_ = view_h / view_w;
