@@ -1,5 +1,5 @@
 var url = "../js/ins.json";
-var style = '/ins';
+var style = '/ivince';
 var items = new Array();
 var img_h = 0;
 var img_w = 0;
@@ -50,7 +50,7 @@ var InsModal = function(ins_num) {
         '</div>'
         ].join("");
 
-    var url_path = 'http://7xsh85.com2.z0.glb.qiniucdn.com/';
+    var url_path = 'http://7xshqi.com2.z0.glb.qiniucdn.com/';
     modal_template = modal_template.replace('url_', url_path + items[ins_num].images.standard.url + style);
     modal_template = modal_template.replace('location_', items[ins_num].location.name);
     modal_template = modal_template.replace('title_', items[ins_num].title);
