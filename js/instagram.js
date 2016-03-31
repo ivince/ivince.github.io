@@ -1,5 +1,5 @@
 var url = "../js/ins.json";
-var style = '/ins';
+var style = '-ins';
 var items = new Array();
 var img_h = 0;
 var img_w = 0;
