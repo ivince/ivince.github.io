@@ -92,7 +92,7 @@ var render = function() {
 
     $.each(items, function(index, item) {
         var template = ins_template;
-        var url_path = '7xsh7y.com1.z0.glb.clouddn.com';
+        var url_path = 'http://7xsh7y.com1.z0.glb.clouddn.com';
 
         template = template.replace('url_', url_path + item.images.thumnail.url);
         template = template.replace('ins_num', index);
