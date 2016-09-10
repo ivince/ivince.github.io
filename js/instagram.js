@@ -100,7 +100,7 @@ $(window).resize(function() {
 var render = function() {
     var ins_template = [
         '<div class="ins_box">',
-        '<div style="padding: 1px;">',
+        '<div style="margin: 5px;">',
         '    <img onClick="InsModal(ins_num)" class="ins_img lazy" title="title_" data-original="url_"/>',
         '</div>',
         '</div>'
@@ -139,7 +139,7 @@ $.ajax({
     success:function(response){
         items = response.items;
         render();
-        
+
         $(function() {
             $("img.lazy").lazyload();
         });
