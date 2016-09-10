@@ -336,7 +336,6 @@ pre .javascript .function {
     font-size: 14px;
     line-height: 14px;
     padding: 15px 10px;
-    margin-bottom: 20px;
     background: rgb(64, 144, 219);
     color: rgba(256,256,256,1);
     font-weight: bold;
@@ -348,8 +347,7 @@ pre .javascript .function {
     top: 0;
 }
 .ins_footer {
-    border-top: solid 1px #CDCDCD;
-    margin-top: 20px;
+    //border-top: solid 1px #CDCDCD;
     font-size: 14px;
     line-height: 14px;
     padding: 15px 10px;
