@@ -22,11 +22,9 @@ function shuffle(sourceArray) {
 
 var InsModal_ = function() {
     $('.ins_modal').remove();
-    $('body').css('overflow', 'auto');
 }
 
 var InsModal = function(ins_num) {
-    $('body').css('overflow', 'hidden');
     var modal_template = [
         '<div class="ins_modal" onClick="InsModal_()">',
         '<div class="ins-tab">',
@@ -38,7 +36,7 @@ var InsModal = function(ins_num) {
         '            location_',
         '        </div>',
         '        <div class="line-1px"></div>',
-        '        <img class="modal_img" src="url_">',
+        '        <img src="../img/loading.gif" class="modal_img" data-src="url_">',
         '        <div class="line-1px"></div>',
         '        <div class="img_title">',
         '            <div class="like-12px"></div>',
@@ -75,6 +73,8 @@ var InsModal = function(ins_num) {
         $('.modal_img').css('width', '100%');
     }
 
+    $(".modal-box img").unveil();
+
 }
 
 $(window).resize(function() {
@@ -101,12 +101,12 @@ var render = function() {
     var ins_template = [
         '<div class="ins_box">',
         '<div style="margin: 5px;">',
-        '    <img onClick="InsModal(ins_num)" class="ins_img lazy" title="title_" data-original="url_"/>',
+        '    <img src="../img/loading.gif" onClick="InsModal(ins_num)" class="ins_img" title="title_" data-src="url_" width="236" height="236"/>',
         '</div>',
         '</div>'
         ].join("");
 
-    items = shuffle(items);
+    //items = shuffle(items);
 
     $.each(items, function(index, item) {
         var template = ins_template;
@@ -141,7 +141,7 @@ $.ajax({
         render();
 
         $(function() {
-            $("img.lazy").lazyload();
+            $("img").unveil();
         });
     }
 });
