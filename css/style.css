@@ -434,3 +434,27 @@ pre .javascript .function {
     background-size: 14px 12px;
     vertical-align: bottom;
 }
+.lazy {
+    display: none;
+}
+.container {
+    max-width: 740px;
+    margin: auto;
+}
+.ins_container {
+    width: 100%;
+    overflow: auto;
+}
+body {
+    border: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+img {
+    box-shadow: 0;
+    border-radius: 0;
+    margin:0;
+    -webkit-box-shadow: 0;
+    -webkit-box-shadow: none;
+}

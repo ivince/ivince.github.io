@@ -101,7 +101,7 @@ var render = function() {
     var ins_template = [
         '<div class="ins_box">',
         '<div style="margin: 5px;">',
-        '    <img src="../img/loading.gif" onClick="InsModal(ins_num)" class="ins_img" title="title_" data-src="url_" width="236" height="236"/>',
+        '    <img src="../img/loading.gif" onClick="InsModal(ins_num)" class="ins_img" title="title_" data-src="url_"/>',
         '</div>',
         '</div>'
         ].join("");
