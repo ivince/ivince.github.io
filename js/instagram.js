@@ -24,7 +24,7 @@ var InsModal_ = function() {
     $('.ins_modal').remove();
 }
 
-var InsModal = function(ins_num) {
+var InsModal = function(this_) {
     var modal_template = [
         '<div class="ins_modal" onClick="InsModal_()">',
         '<div class="ins-tab">',
@@ -49,22 +49,21 @@ var InsModal = function(ins_num) {
         ].join("");
 
     var url_path = '../ins/standard/';
-    modal_template = modal_template.replace('url_', url_path + items[ins_num].images.standard.url);
-    modal_template = modal_template.replace('location_', items[ins_num].location.name);
-    modal_template = modal_template.replace('title_', items[ins_num].title);
-    modal_template = modal_template.replace('title_', items[ins_num].title);
-    modal_template = modal_template.replace('title_', items[ins_num].title);
 
-    img_h = items[ins_num].images.standard.height + 68;// 68px is the (location + title + line-1px)
-    img_w = items[ins_num].images.standard.width;
+    modal_template = modal_template.replace('url_', url_path + $(this_).data('name') + '_' + $(this_).data('type'));
+    modal_template = modal_template.replace('location_', $(this_).data('location'));
+    modal_template = modal_template.replace('title_', $(this_).data('title'));
+
+    var w_h = $(this_).data('w_h');
+    view_h = view_h - 68;// 68px is the (location + title + line-1px)
 
     $(modal_template).appendTo('.container');
 
-    var img_  = img_h / img_w;
+    var img_  = $(this_).data('w_h');
     var view_ = view_h / view_w;
 
     var cssImgH = view_h - 78; // 80px is the (ins_modal's padding + location + title + line-1px)
-    var cssBoxH = Math.floor(img_w / (img_h - 68) * cssImgH);
+    var cssBoxH = Math.floor(w_h * cssImgH);
 
     if (img_ > view_) {
         $('.modal_img').css('height', String(cssImgH) + 'px');
@@ -73,7 +72,7 @@ var InsModal = function(ins_num) {
         $('.modal_img').css('width', '100%');
     }
 
-    $(".modal-box img").unveil();
+    $("img").unveil();
 
 }
 
@@ -138,7 +137,6 @@ $.ajax({
     dataType:"json",
     success:function(response){
         items = response.items;
-        render();
 
         $(function() {
             $("img").unveil();
