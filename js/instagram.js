@@ -50,7 +50,7 @@ var InsModal = function(this_) {
 
     var url_path = '../ins/standard/';
 
-    modal_template = modal_template.replace('url_', url_path + $(this_).data('name') + '_' + $(this_).data('type'));
+    modal_template = modal_template.replace('url_', url_path + $(this_).data('name') + $(this_).data('type'));
     modal_template = modal_template.replace('location_', $(this_).data('location'));
     modal_template = modal_template.replace('title_', $(this_).data('title'));
 
