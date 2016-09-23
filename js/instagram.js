@@ -12,6 +12,7 @@ view_w = view_w > 740 ? 740 : view_w;
 
 $('.modal_img').click(function() {
     $('.ins_modal').fadeOut(0);
+    $(".modal_img").off("unveil");
 });
 
 $('.ins_img').click(function() {
@@ -23,6 +24,7 @@ $('.ins_img').click(function() {
     cal_img_css();
 
     $('.modal-box > img').attr('src', url_path + $(this).data('name') + $(this).data('type'));
+    $(".modal_img").unveil();
 
     var location_text = $(this).data('location');
 
@@ -30,8 +32,6 @@ $('.ins_img').click(function() {
     $('.img_title').html($(this).attr('title'));
 
     $('.ins_modal').fadeIn(1000);
-
-    $("img").unveil();
 
 });
 
