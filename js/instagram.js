@@ -1,6 +1,7 @@
 var url = "../js/ins.json";
 var style = '/ivince';
 var items = new Array();
+var W_H = 1;
 var img_h = 0;
 var img_w = 0;
 var view_h;
@@ -9,137 +10,67 @@ view_h = $(document.body).height();
 view_w = $(document.body).width();
 view_w = view_w > 740 ? 740 : view_w;
 
-function shuffle(sourceArray) {
-    for (var i = 0; i < sourceArray.length - 1; i++) {
-        var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+$('.ins_modal').click(function() {
+    $('.ins_modal').fadeOut(300);
+});
 
-        var temp = sourceArray[j];
-        sourceArray[j] = sourceArray[i];
-        sourceArray[i] = temp;
-    }
-    return sourceArray;
-}
-
-var InsModal_ = function() {
-    $('.ins_modal').remove();
-}
-
-var InsModal = function(this_) {
-    var modal_template = [
-        '<div class="ins_modal" onClick="InsModal_()">',
-        '<div class="ins-tab">',
-        '<div class="modal-tab">',
-        '    <div class="modal-box">',
-        '        <div class="img_location">',
-        '            <i class="shot-12px"></i>',
-        '            <i class="at-10px"></i>',
-        '            location_',
-        '        </div>',
-        '        <div class="line-1px"></div>',
-        '        <img src="../img/loading.gif" class="modal_img" data-src="url_">',
-        '        <div class="line-1px"></div>',
-        '        <div class="img_title">',
-        '            <div class="like-12px"></div>',
-        '            title_',
-        '        </div>',
-        '    </div>',
-        '</div>',
-        '</div>',
-        '</div>'
-        ].join("");
+$('.ins_img').click(function() {
 
     var url_path = '../ins/standard/';
 
-    modal_template = modal_template.replace('url_', url_path + $(this_).data('name') + $(this_).data('type'));
-    modal_template = modal_template.replace('location_', $(this_).data('location'));
-    modal_template = modal_template.replace('title_', $(this_).data('title'));
+    W_H = $(this).data('w_h');
 
-    var w_h = $(this_).data('w_h');
-    view_h = view_h - 68;// 68px is the (location + title + line-1px)
+    cal_img_css();
 
-    $(modal_template).appendTo('.container');
+    $('.modal-box > img').attr('src', url_path + $(this).data('name') + $(this).data('type'));
 
-    var img_  = $(this_).data('w_h');
-    var view_ = view_h / view_w;
+    var location_text = $(this).data('location');
 
-    var cssImgH = view_h - 78; // 80px is the (ins_modal's padding + location + title + line-1px)
-    var cssBoxH = Math.floor(w_h * cssImgH);
+    $('.location').html(location_text);
+    $('.img_title').html($(this).attr('title'));
 
-    if (img_ > view_) {
-        $('.modal_img').css('height', String(cssImgH) + 'px');
-        $('.modal-box').css('width', String(cssBoxH) + 'px');
-    } else {
-        $('.modal_img').css('width', '100%');
-    }
+    $('.ins_modal').fadeIn(1000);
 
     $("img").unveil();
 
+});
+
+var cal_img_css = function() {
+    view_h = $(".ins_modal").height();
+    view_w = $(".ins_modal").width();
+    p_w = $('.post').width();
+    console.log("post_w", p_w);
+    if (view_w > p_w) {
+        view_w = p_w;
+    }
+
+    console.log("view_w", view_w);
+    console.log("view_h", view_h);
+    console.log("W_H", W_H);
+
+    img_h = view_w / W_H;
+    console.log("img_h", img_h);
+
+    if ((img_h + 80) > view_h) {
+        $('.modal-box').css('height', view_h + 'px');
+        $('.modal_img').css('height', view_h - 80 + 'px');
+        $('.modal_img').css('width', 'auto');
+        $('.modal-box').css('width', (view_h - 80) * W_H + 'px');
+        console.log("大于");
+    } else {
+        $('.modal-box').css('height', 'auto');
+        $('.modal-box').css('width', '100%');
+        $('.modal_img').css('width', '100%');
+        $('.modal_img').css('height', 'auto');
+        console.log("小于");
+    }
 }
 
 $(window).resize(function() {
-    view_h = $(document.body).height();
-    view_w = $(document.body).width();
-    view_w = view_w > 740 ? 740 : view_w;
-
-    var img_  = img_h / img_w;
-    var view_ = view_h / view_w;
-
-    var cssImgH = view_h - 78; // 80px is the (ins_modal's padding + location + title + line-1px)
-    var cssBoxH = Math.floor(img_w / (img_h - 68) * cssImgH);
-
-    if (img_ > view_) {
-        $('.modal_img').css('height', String(cssImgH) + 'px');
-        $('.modal-box').css('width', String(cssBoxH) + 'px');
-    } else {
-        $('.modal_img').css('width', '100%');
-    }
+    cal_img_css();
 });
 
 
-var render = function() {
-    var ins_template = [
-        '<div class="ins_box">',
-        '<div style="margin: 5px;">',
-        '    <img src="../img/loading.gif" onClick="InsModal(ins_num)" class="ins_img" title="title_" data-src="url_"/>',
-        '</div>',
-        '</div>'
-        ].join("");
-
-    //items = shuffle(items);
-
-    $.each(items, function(index, item) {
-        var template = ins_template;
-        var url_path = '../ins/thumbnail/';
-
-        template = template.replace('url_', url_path + item.images.thumnail.url);
-        template = template.replace('ins_num', index);
-        template = template.replace('title_', item.title);
-
-        if (index % 3 == 0) {
-            template = template.replace('lpadding_', '0px');
-            template = template.replace('rpadding_', '0px');
-        } else if ((index + 1) % 3 == 0) {
-            template = template.replace('rpadding_', '0px');
-            template = template.replace('lpadding_', '0px');
-        } else{
-            template = template.replace('rpadding_', '0px');
-            template = template.replace('lpadding_', '0px');
-        }
-
-        $(template).appendTo('.ins_container');
-
-    })
-}
-
-$.ajax({
-    url: url,
-    type:"GET",
-    dataType:"json",
-    success:function(response){
-        items = response.items;
-
-        $(function() {
-            $("img").unveil();
-        });
-    }
+$(document).ready(function() {
+    $("img").unveil();
 });
