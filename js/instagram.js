@@ -10,8 +10,8 @@ view_h = $(document.body).height();
 view_w = $(document.body).width();
 view_w = view_w > 740 ? 740 : view_w;
 
-$('.ins_modal').click(function() {
-    $('.ins_modal').fadeOut(300);
+$('.modal_img').click(function() {
+    $('.ins_modal').fadeOut(0);
 });
 
 $('.ins_img').click(function() {
