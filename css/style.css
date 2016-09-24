@@ -13,11 +13,24 @@
 .display { display: block; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
+
+:focus, :active { outline: none }
+
 .row {
   margin-left: -5px;
   margin-right: -5px;
   //padding-bottom: 30px;
   //border-bottom: solid 1px #DDDDDD;
+}
+.disable-scroll {
+    /* disable scrollbar on both x and y axis */
+    overflow: hidden;
+
+    /* disable scrollbar on x-axis only */
+    overflow-x: hidden;
+
+    /* disable scrollbar on y-axis only */
+    overflow-y: hidden;
 }
 .post img {
     min-width: 48px;
@@ -82,7 +95,7 @@ padding: 5px;
 .ins_modal {
     position: fixed;
     display: none;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.618);
     left: 0;
     right: 0;
     top: 0;
