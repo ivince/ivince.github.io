@@ -12,6 +12,7 @@ view_w = view_w > 740 ? 740 : view_w;
 
 $('.modal_img').click(function() {
     $('.ins_modal').fadeOut(0);
+    $('.modal-box > img').attr('src', '');
     $(".modal_img").off("unveil");
 });
 

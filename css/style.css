@@ -69,6 +69,7 @@ padding: 5px;
     width: 100%;
 }
 .image-margin {
+        line-height: 12px;
     height: 40px;
     box-sizing: border-box;
 }
@@ -113,6 +114,7 @@ padding: 5px;
     height: 100%;
 }
 .modal-box {
+    line-height: 0;
     margin: auto;
     max-width: 680px;
     background: white;
