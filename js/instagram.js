@@ -16,49 +16,22 @@ view_w = view_w > 740 ? 740 : view_w;
  * shown / hidden
  * ============================= */
 
-function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault)
-      e.preventDefault();
-  e.returnValue = false;
-}
-
-function theMouseWheel(e) {
-  preventDefault(e);
-}
-
-function disable_scroll() {
-  if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', theMouseWheel, false);
-  }
-  window.onmousewheel = document.onmousewheel = theMouseWheel;
-}
-
-function enable_scroll() {
-    if (window.removeEventListener) {
-        window.removeEventListener('DOMMouseScroll', theMouseWheel, false);
-    }
-    window.onmousewheel = document.onmousewheel = null;
-}
-
 $('.ins_modal').click(function() {
     $('.ins_modal').fadeOut(0);
     $('.modal-box img').attr('src', '');
-    $(".modal_img").off("unveil");
+    //$(".modal_img").off("unveil");
 
     $('body').removeClass('disable-scroll');
-    enable_scroll();
 
 });
 
-$('.modal-box').click(function() {
+$('.image-margin').click(function() {
     return false;
 });
 
 $('.ins_img').click(function() {
 
     $('body').addClass('disable-scroll');
-    disable_scroll();
 
     var url_path = '../ins/standard/';
 
@@ -67,7 +40,7 @@ $('.ins_img').click(function() {
     cal_img_css();
 
     $('.modal-box img').attr('src', url_path + $(this).data('name') + $(this).data('type'));
-    $(".modal_img").unveil();
+    //$(".modal_img").unveil();
 
     var location_text = $(this).data('location');
 
