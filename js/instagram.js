@@ -7,7 +7,7 @@ var img_w = 0;
 var view_h;
 var view_w;
 
-$('.ins_modal, .close').click(function() {
+$('.ins_modal').click(function() {
     $('.ins_modal').fadeOut(0);
     $('.modal-box img').attr('src', '');
 
@@ -15,7 +15,7 @@ $('.ins_modal, .close').click(function() {
 
 });
 
-$('.modal-box').click(function() {
+$('.image-margin').click(function() {
     return false;
 });
 
