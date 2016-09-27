@@ -77,7 +77,7 @@ var push = function() {
         // Do nothing. It's OK if nothing to commit.
       });
     }).then(function() {
-      return git('push', '-u', repo.url, 'HEAD:' + repo.branch, '--force');
+      return git('push', '-u', repo.url, 'HEAD:' + repo.branch);
     });
   }
 
