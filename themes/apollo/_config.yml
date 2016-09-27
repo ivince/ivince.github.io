@@ -1,0 +1,23 @@
+menu:
+    Blog: /
+    Gallery: /instagram/
+    Archive: /archives/
+    GitHub: https://github.com/ivince/
+    #Rss: /atom.xml
+
+favicon: /ivince.png
+logo: /ivince.png
+
+# Comment
+# e.g disqus: seansun
+disqus:
+duoshuo:
+
+# Analytics
+# google-analytics:
+ga: UA-75242174-1
+
+ba: d3da441e386794c3ecad1d39a8f8f31a
+
+# Copyright Infomation
+startyear: 2015
