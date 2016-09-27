@@ -210,9 +210,6 @@ img {
         padding: 5px;
         line-height: 0;
     }
-    .ins_img {
-        box-shadow: 3px 3px 5px #888888;
-    }
 }
 @media screen and (max-width: 700px) {
     .row {
@@ -224,9 +221,7 @@ img {
         float: left;
         width: 33.3333%;
         min-height: 1px;
-        padding: 2px;
-    }
-    .ins_img {
-        box-shadow: 2px 2px 2px #888888;
+        padding: 3px;
+        line-height: 0;
     }
 }
