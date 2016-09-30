@@ -210,6 +210,9 @@ img {
         padding: 5px;
         line-height: 0;
     }
+    .ins_img {
+        border-radius: 5px;
+    }
 }
 @media screen and (max-width: 700px) {
     .row {
@@ -223,5 +226,8 @@ img {
         min-height: 1px;
         padding: 3px;
         line-height: 0;
+    }
+    .ins_img {
+        border-radius: 3px;
     }
 }
