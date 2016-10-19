@@ -4,7 +4,7 @@ date: 2016-10-19 15:57:55
 tags: [算法, 排序]
 ---
 
-#### 交换函数
+## 交换函数
 ``` cpp
 /*
 交换函数
@@ -17,7 +17,7 @@ void swap(int *list, int low, int high )
 }
 ```
 
-#### 冒泡排序
+## 冒泡排序
 ``` cpp
 /*
 冒泡排序（稳定）
@@ -39,7 +39,7 @@ void bubsort( int *list, int n )
 }
 ```
 
-#### 选择排序
+## 选择排序
 ``` cpp
 /*
 选择排序（不稳定）
@@ -63,7 +63,7 @@ void selsort( int *list, int n )
 }
 ```
 
-#### 插入排序
+## 插入排序
 ``` cpp
 /*
 插入排序函数（shell排序的辅助函数）
@@ -81,7 +81,7 @@ void inssort( int *list, int n, int incr )
 }
 ```
 
-#### 快速排序
+## 快速排序
 ``` js
 function quickSort(array) {
 	// 交换元素位置
@@ -113,6 +113,37 @@ function quickSort(array) {
 	}
 	sort(array, 0, array.length - 1);
 	return array;
+}
+```
+
+## 二分查找
+``` cpp
+// 递归版本
+int binary_search(const int arr[], int start, int end, int key) {
+	if (start > end)
+		return -1;
+
+	int mid = start + (end - start) / 2; //直接平均可能會溢位，所以用此算法
+	if (arr[mid] > key)
+		return binary_search(arr, start, mid - 1, key);
+	if (arr[mid] < key)
+		return binary_search(arr, mid + 1, end, key);
+	return mid; //最後檢測相等是因為多數搜尋狀況不是大於要不就小於
+}
+
+// while循环
+int binary_search(const int arr[], int start, int end, int key) {
+	int mid;
+	while (start <= end) {
+		mid = start + (end - start) / 2; //直接平均可能會溢位，所以用此算法
+		if (arr[mid] < key)
+			start = mid + 1;
+		else if (arr[mid] > key)
+			end = mid - 1;
+		else
+			return mid; //最後檢測相等是因為多數搜尋狀況不是大於要不就小於
+	}
+	return -1;
 }
 ```
 
