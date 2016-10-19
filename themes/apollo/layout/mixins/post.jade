@@ -41,7 +41,7 @@ mixin gallery()
     link(rel="stylesheet", href=url_for("css/style.css"))
 
     for item in site.data.ins.items
-        h4= full_date(item.time, 'MMM, YYYY')
+        h2= full_date(item.time, 'MMM, YYYY')
         div.row
             for image in item.images
                 div.col-1-3
