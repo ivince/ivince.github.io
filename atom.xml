@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ivince.github.io/"/>
-  <updated>2016-10-19T16:06:15.354Z</updated>
+  <updated>2016-10-28T15:32:36.105Z</updated>
   <id>https://ivince.github.io/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>快速排序</title>
+    <link href="https://ivince.github.io/2016/10/28/quick-sort-algorithm/"/>
+    <id>https://ivince.github.io/2016/10/28/quick-sort-algorithm/</id>
+    <published>2016-10-28T12:23:37.000Z</published>
+    <updated>2016-10-28T15:32:36.105Z</updated>
+    
+    <content type="html"><![CDATA[<p>快速排序的基本思想是分治(divide and conquer)，<br><a id="more"></a></p>
+<h3 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h3><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;快速排序的基本思想是分治(divide and conquer)，&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="快排" scheme="https://ivince.github.io/tags/%E5%BF%AB%E6%8E%92/"/>
+    
+      <category term="排序" scheme="https://ivince.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="算法" scheme="https://ivince.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>排序算法</title>

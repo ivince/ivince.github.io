@@ -40,7 +40,7 @@ $('.ins_img').click(function() {
     $('.location').html(location_text);
     $('.img_title').html($(this).attr('title'));
 
-    $('.ins_modal').fadeIn(1000*0.618);
+    $('.ins_modal').fadeIn(500*0.618);
 
 });
 
@@ -57,9 +57,9 @@ var cal_img_css = function() {
 
     if ((img_h + 80) > view_h) {
         $('.modal-box').css('height', view_h + 'px');
-        $('.modal_img').css('height', view_h - 80 + 'px');
-        $('.modal_img').css('width', 'auto');
         $('.modal-box').css('width', (view_h - 80) * W_H + 'px');
+        $('.modal_img').css('height', view_h - 80 + 'px');
+        $('.modal_img').css('width', '100%');
     } else {
         $('.modal-box').css('height', 'auto');
         $('.modal-box').css('width', '100%');
