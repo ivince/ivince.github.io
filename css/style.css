@@ -231,3 +231,7 @@ img {
         border-radius: 3px;
     }
 }
+.post {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}

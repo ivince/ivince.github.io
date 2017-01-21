@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ivince.github.io/"/>
-  <updated>2016-10-28T15:32:36.105Z</updated>
+  <updated>2016-11-01T02:54:58.784Z</updated>
   <id>https://ivince.github.io/</id>
   
   <author>
@@ -20,14 +20,16 @@
     <link href="https://ivince.github.io/2016/10/28/quick-sort-algorithm/"/>
     <id>https://ivince.github.io/2016/10/28/quick-sort-algorithm/</id>
     <published>2016-10-28T12:23:37.000Z</published>
-    <updated>2016-10-28T15:32:36.105Z</updated>
+    <updated>2016-11-01T02:54:58.784Z</updated>
     
-    <content type="html"><![CDATA[<p>快速排序的基本思想是分治(divide and conquer)，<br><a id="more"></a></p>
-<h3 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h3><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3>]]></content>
+    <content type="html"><![CDATA[<a id="more"></a>
+<h3 id="分区-partition"><a href="#分区-partition" class="headerlink" title="分区(partition)"></a>分区(partition)</h3><h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><p>快速排序的基本思想是分治(divide and conquer)。</p>
+]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;快速排序的基本思想是分治(divide and conquer)，&lt;br&gt;
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;分区-partition&quot;&gt;&lt;a href=&quot;#分区-partition&quot; class=&quot;headerlink&quot; title=&quot;分区(partition)&quot;&gt;&lt;/a&gt;分区(partition)&lt;/h3&gt;&lt;h3 id=&quot;合并&quot;&gt;&lt;
     
     </summary>
     
